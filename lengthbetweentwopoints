@@ -1,0 +1,16 @@
+import math
+
+points =[(3,6),(4,9),(5,8)]
+def euclideanDistance(p1,p2):
+    distance = math.sqrt((p1[0]-p2[0])**2+(p1[1]-p2[1])**2)
+
+    return distance
+distances = []
+for p in range(len(points)):
+    if p+1<len(points):
+          distances.append(euclideanDistance(points[p],points[p+1]))
+
+print(min(distances))
+
+
+
